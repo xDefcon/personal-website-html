@@ -59,7 +59,7 @@ $ip = $_SERVER["REMOTE_ADDR"];
 
     const userLang = navigator.language || navigator.userLanguage;
 
-    if (userLang === "it") {
+    if (userLang.indexOf("it") === 0) {
         phrases = ['Benvenuto <?php echo $ip; ?>,', 'il tuo IP non verrà salvato.', 'xdefcon.com', 'xdefcon.com - minecraft & web developer'];
     } else {
         phrases = ['Welcome <?php echo $ip; ?>,', 'your IP will not be stored.', 'xdefcon.com', 'xdefcon.com - minecraft & web developer'];
