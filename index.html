@@ -1,9 +1,3 @@
-<?php
-if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
-    $_SERVER['REMOTE_ADDR'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
-}
-$ip = $_SERVER["REMOTE_ADDR"];
-?>
 <!DOCTYPE html>
 <html lang="it">
 
@@ -60,9 +54,9 @@ $ip = $_SERVER["REMOTE_ADDR"];
     const userLang = navigator.language || navigator.userLanguage;
 
     if (userLang.indexOf("it") === 0) {
-        phrases = ['Benvenuto <?php echo $ip; ?>,', 'il tuo IP non verrà salvato.', 'xdefcon.com', 'xdefcon.com - java & web developer'];
+        phrases = ['Benvenuto,', 'il tuo IP non verrà salvato.', 'xdefcon.com', 'xdefcon.com - java & web developer'];
     } else {
-        phrases = ['Welcome <?php echo $ip; ?>,', 'your IP will not be stored.', 'xdefcon.com', 'xdefcon.com - java & web developer'];
+        phrases = ['Welcome,', 'your IP will not be stored.', 'xdefcon.com', 'xdefcon.com - java & web developer'];
     }
 
     const el = document.querySelector('#sub-title');
